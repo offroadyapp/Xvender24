@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Xvender24</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="contact-body">
+
+    <!-- Navigation -->
+    <nav class="nav contact-nav">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">Xvender24</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="how-it-works.html">How it Works</a></li>
+                <li><a href="vendors.html">Vendors</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="investors.html">Investors</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="contact-main">
+        
+        <!-- SECTION 1: HERO -->
+        <section class="section section-hero">
+            <div class="container">
+                <h1 class="hero-title fade-in">Get in Touch</h1>
+                <p class="hero-subtext fade-in delay-1">
+                    Whether you're interested in joining our network, investing in infrastructure, or exploring partnership opportunities.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CATEGORY SELECTOR -->
+        <section class="section section-category">
+            <div class="container">
+                <h2 class="category-heading fade-in">First, tell us who you are.</h2>
+                <p class="category-subtext fade-in delay-1">Select the category that best describes your interest.</p>
+                <div class="spacer-40"></div>
+                <div class="category-grid">
+                    <div class="category-card fade-in-card delay-0" data-category="investor" tabindex="0">
+                        <h3>Investor</h3>
+                        <p>Equity or debt capital for network expansion</p>
+                    </div>
+                    <div class="category-card fade-in-card delay-1" data-category="partner" tabindex="0">
+                        <h3>Infrastructure Partner</h3>
+                        <p>Store-level capital participation</p>
+                    </div>
+                    <div class="category-card fade-in-card delay-2" data-category="vendor" tabindex="0">
+                        <h3>Brand / Vendor</h3>
+                        <p>Launch your products in our network</p>
+                    </div>
+                    <div class="category-card fade-in-card delay-3" data-category="customer" tabindex="0">
+                        <h3>Customer</h3>
+                        <p>Support or product inquiries</p>
+                    </div>
+                    <div class="category-card fade-in-card delay-4" data-category="general" tabindex="0">
+                        <h3>General Inquiry</h3>
+                        <p>Other questions or opportunities</p>
+                    </div>
+                </div>
+                <p class="category-error" id="categoryError">Please choose a category.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: CONTACT FORM -->
+        <section class="section section-form">
+            <div class="container">
+                <form class="contact-form" id="contactForm">
+                    <input type="hidden" name="category" id="categoryInput" value="">
+                    
+                    <div class="form-group fade-in-form delay-0">
+                        <label for="fullName">Full Name <span class="required">*</span></label>
+                        <input 
+                            type="text" 
+                            id="fullName" 
+                            name="fullName" 
+                            class="form-input" 
+                            placeholder="Your name"
+                            required
+                        >
+                        <span class="error-text" id="fullNameError"></span>
+                    </div>
+
+                    <div class="form-group fade-in-form delay-1">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="your@email.com"
+                            required
+                        >
+                        <span class="error-text" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group fade-in-form delay-2">
+                        <label for="phone">Phone</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            class="form-input" 
+                            placeholder="+1 (555) 123-4567"
+                        >
+                        <span class="error-text" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group fade-in-form delay-3">
+                        <label for="comments">Message <span class="required">*</span></label>
+                        <textarea 
+                            id="comments" 
+                            name="comments" 
+                            class="form-textarea" 
+                            placeholder="Tell us about your interest..."
+                            required
+                        ></textarea>
+                        <span class="error-text" id="commentsError"></span>
+                    </div>
+
+                    <!-- SECTION 4: CONSENT + SUBMIT -->
+                    <div class="form-consent fade-in-form delay-4">
+                        <label class="consent-label">
+                            <input type="checkbox" name="newsletter" id="newsletter" class="consent-checkbox">
+                            <span>Send me updates from Xvender24</span>
+                        </label>
+                        <p class="consent-note">You can unsubscribe anytime.</p>
+                    </div>
+
+                    <div class="form-submit fade-in-form delay-5">
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-spinner" style="display: none;">
+                                <svg class="spinner" viewBox="0 0 24 24" width="20" height="20">
+                                    <circle cx="12" cy="12" r="10" stroke="#000000" stroke-width="3" fill="none" stroke-dasharray="62.83" stroke-dashoffset="62.83" opacity="0.3"/>
+                                    <circle cx="12" cy="12" r="10" stroke="#000000" stroke-width="3" fill="none" stroke-dasharray="31.42 31.42" stroke-linecap="round" class="spinner-circle"/>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- SECTION 5: SUCCESS STATE (hidden by default) -->
+        <section class="section section-success" id="successState" style="display: none;">
+            <div class="container">
+                <div class="success-content">
+                    <div class="success-icon">
+                        <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+                            <circle cx="32" cy="32" r="30" stroke="#ffffff" stroke-width="2"/>
+                            <path d="M20 32L28 40L44 24" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h2 class="success-title">Message received.</h2>
+                    <p class="success-text">We'll reply by email shortly.</p>
+                    <a href="index.html" class="success-btn">Back to Home</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer contact-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Xvender24. All rights reserved.</p>
+            <p>Contact: <a href="mailto:hello@xvender.com">hello@xvender.com</a> | (888) 661-0888</p>
+        </div>
+    </footer>
+
+    <script src="js/contact.js"></script>
+</body>
+</html>

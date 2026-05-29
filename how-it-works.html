@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - Xvender24</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/how-it-works.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="logo"><a href="index.html">Xvender24</a></div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="location.html">Location</a></li>
+                <li><a href="how-it-works.html" class="active">How it Works</a></li>
+                <li><a href="vendors.html">Vendors</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="investors.html">Investors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="how-it-works-main">
+        
+        <!-- SCREEN 1: Plug & Play -->
+        <section class="animated-section" id="s1_plug" data-screen="1">
+            <div class="section-container">
+                <div class="content-column">
+                    <h1 class="headline">Plug. Connect. Sell.</h1>
+                    <p class="subhead">Power + WiFi. Start in minutes.</p>
+                    <ul class="bullet-list">
+                        <li>Minimal build-out</li>
+                        <li>Modular machines</li>
+                        <li>Launch fast</li>
+                    </ul>
+                </div>
+                <div class="animation-column">
+                    <canvas class="animation-canvas" id="canvas_s1"></canvas>
+                    <div class="animation-tooltips">
+                        <div class="tooltip" data-index="0">Plug & play modules</div>
+                        <div class="tooltip" data-index="1">Refrigeration / heating options</div>
+                        <div class="tooltip" data-index="2">Power + WiFi ready</div>
+                    </div>
+                    <div class="playback-control hidden">
+                        <button class="play-pause-btn">⏵ Resume</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 2: Members Only -->
+        <section class="animated-section" id="s2_members" data-screen="2">
+            <div class="section-container">
+                <div class="content-column">
+                    <h1 class="headline">Members unlock the store.</h1>
+                    <p class="subhead">App-based access control.</p>
+                    <ul class="bullet-list">
+                        <li>Controlled entry</li>
+                        <li>Safer environment</li>
+                        <li>Traceable activity</li>
+                    </ul>
+                </div>
+                <div class="animation-column">
+                    <canvas class="animation-canvas" id="canvas_s2"></canvas>
+                    <div class="animation-tooltips">
+                        <div class="tooltip" data-index="0">App registration</div>
+                        <div class="tooltip" data-index="1">Controlled access</div>
+                        <div class="tooltip" data-index="2">Member-only entry</div>
+                    </div>
+                    <div class="playback-control hidden">
+                        <button class="play-pause-btn">⏵ Resume</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 3: Pay at Any Machine -->
+        <section class="animated-section" id="s3_pay" data-screen="3">
+            <div class="section-container">
+                <div class="content-column">
+                    <h1 class="headline">Tap to pay.</h1>
+                    <p class="subhead">Card • Apple Pay • Google Pay.</p>
+                    <ul class="bullet-list">
+                        <li>Pay at the machine</li>
+                        <li>Instant dispensing</li>
+                        <li>24/7 convenience</li>
+                    </ul>
+                </div>
+                <div class="animation-column">
+                    <canvas class="animation-canvas" id="canvas_s3"></canvas>
+                    <div class="animation-tooltips">
+                        <div class="tooltip" data-index="0">Pay at any unit</div>
+                        <div class="tooltip" data-index="1">Contactless supported</div>
+                        <div class="tooltip" data-index="2">Instant pickup</div>
+                    </div>
+                    <div class="playback-control hidden">
+                        <button class="play-pause-btn">⏵ Resume</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 4: Real-time Data -->
+        <section class="animated-section" id="s4_data" data-screen="4">
+            <div class="section-container">
+                <div class="content-column">
+                    <h1 class="headline">Every machine is online.</h1>
+                    <p class="subhead">Real-time sales + inventory tracking.</p>
+                    <ul class="bullet-list">
+                        <li>Live sales</li>
+                        <li>Inventory signals</li>
+                        <li>Machine health</li>
+                    </ul>
+                </div>
+                <div class="animation-column">
+                    <canvas class="animation-canvas" id="canvas_s4"></canvas>
+                    <div class="animation-tooltips">
+                        <div class="tooltip" data-index="0">Real-time telemetry</div>
+                        <div class="tooltip" data-index="1">Inventory tracking</div>
+                        <div class="tooltip" data-index="2">Remote monitoring</div>
+                    </div>
+                    <div class="playback-control hidden">
+                        <button class="play-pause-btn">⏵ Resume</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 5: Vendor Restock Alerts -->
+        <section class="animated-section" id="s5_restock" data-screen="5">
+            <div class="section-container">
+                <div class="content-column">
+                    <h1 class="headline">Vendors get restock alerts.</h1>
+                    <p class="subhead">Low stock → notification → refill.</p>
+                    <ul class="bullet-list">
+                        <li>Low-stock reminders</li>
+                        <li>Faster replenishment</li>
+                        <li>Better uptime</li>
+                    </ul>
+                </div>
+                <div class="animation-column">
+                    <canvas class="animation-canvas" id="canvas_s5"></canvas>
+                    <div class="animation-tooltips">
+                        <div class="tooltip" data-index="0">Vendor dashboard</div>
+                        <div class="tooltip" data-index="1">Low-stock alerts</div>
+                        <div class="tooltip" data-index="2">Restock scheduling</div>
+                    </div>
+                    <div class="playback-control hidden">
+                        <button class="play-pause-btn">⏵ Resume</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 6: AI-Monitored Security -->
+        <section class="animated-section" id="s6_security" data-screen="6">
+            <div class="section-container">
+                <div class="content-column">
+                    <h1 class="headline">AI-monitored security.</h1>
+                    <p class="subhead">Detect anomalies. Alert. Intervene.</p>
+                    <ul class="bullet-list">
+                        <li>Proactive alerts</li>
+                        <li>Two-way voice intercom</li>
+                        <li>Operational continuity</li>
+                    </ul>
+                </div>
+                <div class="animation-column">
+                    <canvas class="animation-canvas" id="canvas_s6"></canvas>
+                    <div class="animation-tooltips">
+                        <div class="tooltip" data-index="0">AI anomaly detection</div>
+                        <div class="tooltip" data-index="1">Alerting + escalation</div>
+                        <div class="tooltip" data-index="2">Voice intercom support</div>
+                    </div>
+                    <div class="playback-control hidden">
+                        <button class="play-pause-btn">⏵ Resume</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCREEN 7: CTA -->
+        <section class="cta-section" id="s7_cta">
+            <div class="section-container">
+                <div class="cta-content">
+                    <h1 class="headline">Ready to launch?</h1>
+                    <div class="cta-buttons">
+                        <a href="vendors.html" class="btn btn-primary">Sell With Us</a>
+                        <a href="investors.html" class="btn btn-secondary">Invest With Us</a>
+                        <a href="location.html" class="btn btn-secondary">Find a Location</a>
+                    </div>
+                </div>
+                <canvas class="network-map-canvas" id="canvas_cta"></canvas>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Xvender24. All rights reserved.</p>
+            <p>Contact: <a href="mailto:hello@xvender.com">hello@xvender.com</a> | (888) 661-0888</p>
+        </div>
+    </footer>
+
+    <script src="js/how-it-works.js"></script>
+</body>
+</html>
