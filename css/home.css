@@ -1,0 +1,110 @@
+/* ===================================
+   HOME PAGE - TECHNOLOGY PLATFORM
+   Extends the global style system.
+   =================================== */
+
+/* ===== HEADLINE OVERRIDE ===== */
+/* Global .headline has max-width: 4ch (legacy short-title constraint).
+   Home headlines are long-form; let them flow naturally. */
+.screen .headline {
+    max-width: none;
+}
+
+/* ===== SCREEN 2: TECHNOLOGY MODULES ===== */
+.screen-2 {
+    background: linear-gradient(to bottom, var(--primary-bg), #050505);
+}
+
+.modules-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-md);
+    max-width: 1080px;
+    margin: var(--spacing-lg) auto 0;
+    text-align: left;
+}
+
+.module-item {
+    padding: var(--spacing-md);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.module-item:hover {
+    border-color: var(--accent-blue);
+    background: rgba(0, 212, 255, 0.04);
+}
+
+.module-index {
+    display: block;
+    font-size: 12px;
+    font-weight: var(--weight-bold);
+    color: var(--accent-blue);
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-sm);
+}
+
+.module-name {
+    font-size: 18px;
+    font-weight: var(--weight-bold);
+    color: var(--text-primary);
+    letter-spacing: -0.3px;
+    margin-bottom: var(--spacing-xs);
+    line-height: 1.3;
+}
+
+.module-desc {
+    font-size: 14px;
+    font-weight: var(--weight-regular);
+    line-height: 1.55;
+    color: var(--text-secondary);
+}
+
+/* ===== SCREEN 3: APPLIED INTELLIGENCE ===== */
+.ai-list {
+    max-width: 720px;
+    margin: var(--spacing-lg) auto 0;
+    text-align: left;
+}
+
+.ai-item {
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    line-height: 1.4;
+}
+
+.ai-item:last-child {
+    border-bottom: none;
+}
+
+/* ===== SCREEN 5: CTA BUTTONS ===== */
+.screen-5 .cta-buttons {
+    flex-wrap: wrap;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .modules-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+        margin-top: var(--spacing-md);
+        text-align: left;
+    }
+
+    .module-item {
+        padding: var(--spacing-sm) var(--spacing-md);
+    }
+
+    .ai-list {
+        margin-top: var(--spacing-md);
+    }
+
+    .ai-item {
+        font-size: 18px;
+    }
+}

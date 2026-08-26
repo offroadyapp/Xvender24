@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
     <meta charset="UTF-8">
+    <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xvender24 - The Offline Amazon for Modern Brands</title>
+    <title>Xvender24 - The Operating System for Autonomous Retail</title>
+    <meta name="description" content="Xvender24 develops proprietary software, automation and IoT infrastructure in British Columbia for multi-vendor autonomous retail environments.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -13,10 +16,11 @@
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
-            <div class="logo">Xvender24</div>
+            <div class="logo"><a href="index.html">Xvender24</a></div>
             <ul class="nav-menu">
-                <li><a href="#home">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About</a></li>
+                <li><a href="technology.html">Technology</a></li>
                 <li><a href="location.html">Location</a></li>
                 <li><a href="how-it-works.html">How it Works</a></li>
                 <li><a href="vendors.html">Vendors</a></li>
@@ -29,76 +33,92 @@
 
     <!-- Main Content -->
     <main class="main-content">
-        
-        <!-- SCREEN 1: CATEGORY DEFINITION -->
+
+        <!-- SCREEN 1: HERO -->
         <section class="screen screen-1" id="screen-1">
             <canvas id="cityCanvas" class="city-canvas"></canvas>
             <div class="screen-content">
-                <h1 class="headline fade-in-up">The Offline Amazon<br>for Modern Brands</h1>
-                <p class="subtitle fade-in-up delay-1">Plug-and-play retail infrastructure.<br>Open 24/7.</p>
+                <h1 class="headline fade-in-up">The Operating System<br>for Autonomous Retail</h1>
+                <p class="subtitle fade-in-up delay-1">Proprietary software, automation and IoT infrastructure<br>developed in British Columbia for multi-vendor<br>autonomous retail environments.</p>
             </div>
         </section>
 
-        <!-- SCREEN 2: THE PROBLEM -->
+        <!-- SCREEN 2: TECHNOLOGY MODULES -->
         <section class="screen screen-2" id="screen-2">
             <div class="screen-content">
-                <h2 class="headline fade-in-up">Retail is expensive.</h2>
-                <div class="cost-layers">
-                    <p class="cost-item fade-in-seq" data-delay="0">Rent.</p>
-                    <p class="cost-item fade-in-seq" data-delay="1">Staff.</p>
-                    <p class="cost-item fade-in-seq" data-delay="2">Delivery tax.</p>
-                    <p class="cost-item fade-in-seq" data-delay="3">Retail markups.</p>
+                <h2 class="headline fade-in-up">One platform.<br>Six layers of technology.</h2>
+                <div class="modules-grid">
+                    <div class="module-item fade-in-seq" data-delay="0">
+                        <span class="module-index">01</span>
+                        <h3 class="module-name">Vendor Management</h3>
+                        <p class="module-desc">Onboarding, catalogue, allocation and vendor performance.</p>
+                    </div>
+                    <div class="module-item fade-in-seq" data-delay="1">
+                        <span class="module-index">02</span>
+                        <h3 class="module-name">Inventory Intelligence</h3>
+                        <p class="module-desc">Real-time stock signals and replenishment coordination.</p>
+                    </div>
+                    <div class="module-item fade-in-seq" data-delay="2">
+                        <span class="module-index">03</span>
+                        <h3 class="module-name">Customer Membership &amp; Loyalty</h3>
+                        <p class="module-desc">Digital identities, controlled access and loyalty programs.</p>
+                    </div>
+                    <div class="module-item fade-in-seq" data-delay="3">
+                        <span class="module-index">04</span>
+                        <h3 class="module-name">Automated Settlement</h3>
+                        <p class="module-desc">Transaction allocation, reconciliation and settlement.</p>
+                    </div>
+                    <div class="module-item fade-in-seq" data-delay="4">
+                        <span class="module-index">05</span>
+                        <h3 class="module-name">Remote Site Management</h3>
+                        <p class="module-desc">Monitoring, control and diagnostics across deployed sites.</p>
+                    </div>
+                    <div class="module-item fade-in-seq" data-delay="5">
+                        <span class="module-index">06</span>
+                        <h3 class="module-name">IoT &amp; Device Integration</h3>
+                        <p class="module-desc">Connected devices, telemetry and hardware integration.</p>
+                    </div>
                 </div>
-                <p class="conclusion fade-in-up delay-4">Consumers pay for infrastructure.</p>
-            </div>
-            <div class="storefront-silhouette">
-                <div class="cost-tag" data-label="Rent"></div>
-                <div class="cost-tag" data-label="Staff"></div>
-                <div class="cost-tag" data-label="Delivery"></div>
-                <div class="cost-tag" data-label="Tax"></div>
-                <div class="cost-tag" data-label="Markups"></div>
             </div>
         </section>
 
-        <!-- SCREEN 3: THE SHIFT (CORE MOMENT) -->
+        <!-- SCREEN 3: APPLIED INTELLIGENCE -->
         <section class="screen screen-3" id="screen-3">
             <div class="screen-content">
-                <div class="cost-bar-container">
-                    <div class="cost-bar" id="costBar">
-                        <div class="cost-segment delivery" data-label="Delivery 30%"></div>
-                        <div class="cost-segment retail" data-label="Retail 25%"></div>
-                        <div class="cost-segment labor" data-label="Labor Overhead"></div>
-                    </div>
-                    <div class="cost-label-start">100%</div>
-                    <div class="cost-label-end">50%</div>
+                <h2 class="headline fade-in-up">Applied intelligence,<br>built into the platform.</h2>
+                <p class="subtitle fade-in-up delay-1">The platform applies analytics and machine intelligence to:</p>
+                <div class="ai-list">
+                    <p class="ai-item fade-in-seq" data-delay="0">Demand forecasting</p>
+                    <p class="ai-item fade-in-seq" data-delay="1">Inventory optimization</p>
+                    <p class="ai-item fade-in-seq" data-delay="2">Product performance analytics</p>
+                    <p class="ai-item fade-in-seq" data-delay="3">Automated replenishment recommendations</p>
+                    <p class="ai-item fade-in-seq" data-delay="4">Customer behaviour analytics</p>
                 </div>
-                <h2 class="headline fade-in-scale">Cut market entry costs<br>by up to 50%.</h2>
-                <p class="subtitle fade-in-up delay-1">Better margins. Lower prices.</p>
             </div>
         </section>
 
-        <!-- SCREEN 4: THE PLATFORM NETWORK -->
+        <!-- SCREEN 4: DEPLOYMENT SITES -->
         <section class="screen screen-4" id="screen-4">
             <canvas id="networkCanvas" class="network-canvas"></canvas>
             <div class="screen-content">
-                <h2 class="headline fade-in-up">Prime locations.<br>Modular retail nodes.<br>No storefront buildout.</h2>
-                <p class="subtitle fade-in-up delay-1">Physical retail. Without the store.</p>
+                <h2 class="headline fade-in-up">Autonomous Retail<br>Deployment Sites</h2>
+                <p class="subtitle fade-in-up delay-1">Physical locations serve as deployment and commercial validation<br>environments for Xvender24's proprietary technology platform.</p>
             </div>
         </section>
 
-        <!-- SCREEN 5: STRATEGIC POSITION + CTA -->
+        <!-- SCREEN 5: CTA -->
         <section class="screen screen-5" id="screen-5">
             <div class="split-effect">
                 <div class="split-left particles-canvas"></div>
                 <div class="split-right product-silhouette"></div>
             </div>
             <div class="screen-content">
-                <h2 class="headline fade-in-up">Built on atoms.<br>Powered by AI.</h2>
-                <p class="tagline fade-in-up delay-1">We own the last meter of commerce.</p>
-                <h3 class="final-line fade-in-scale delay-2">Retail. Rebuilt.</h3>
-                <div class="cta-buttons fade-in-up delay-3">
+                <h2 class="headline fade-in-up">Technology for<br>Autonomous Retail</h2>
+                <p class="tagline fade-in-up delay-1">Platform access for vendors, operators and investors.</p>
+                <div class="cta-buttons fade-in-up delay-2">
                     <a href="vendors.html" class="btn btn-primary">Launch Partner</a>
                     <a href="investors.html" class="btn btn-secondary">Request Deck</a>
+                    <a href="technology.html" class="btn btn-secondary">Explore the Platform</a>
                 </div>
             </div>
         </section>

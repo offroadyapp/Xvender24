@@ -24,9 +24,6 @@ const animationObserver = new IntersectionObserver((entries) => {
             
             // Trigger specific screen animations
             const screenId = entry.target.id;
-            if (screenId === 'screen-3') {
-                triggerCostBarAnimation();
-            }
             if (screenId === 'screen-4') {
                 expandNetworkNodes();
             }
@@ -48,8 +45,8 @@ function initAnimations() {
         animationObserver.observe(screen);
     });
     
-    // Sequential cost items animation
-    initCostItemsAnimation();
+    // Stagger groups (modules grid, AI list)
+    initStaggerGroups();
 }
 
 // ===== SCREEN 1: CITY GRID WITH NODES =====
@@ -167,54 +164,26 @@ function initCityCanvas() {
     });
 }
 
-// ===== SCREEN 2: SEQUENTIAL COST ITEMS =====
-function initCostItemsAnimation() {
-    const screen2 = document.getElementById('screen-2');
-    if (!screen2) return;
-    
-    const observer = new IntersectionObserver((entries) => {
+// ===== SCREEN 2/3: STAGGERED REVEAL GROUPS =====
+function initStaggerGroups() {
+    const groups = document.querySelectorAll('.modules-grid, .ai-list');
+    if (groups.length === 0) return;
+
+    const staggerObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const costItems = screen2.querySelectorAll('.cost-item');
-                costItems.forEach((item, index) => {
+                const items = entry.target.querySelectorAll('.fade-in-seq');
+                items.forEach((item, index) => {
                     setTimeout(() => {
                         item.classList.add('visible');
-                    }, index * 400);
+                    }, index * 120);
                 });
-                
-                // Show conclusion after all items
-                setTimeout(() => {
-                    const conclusion = screen2.querySelector('.conclusion');
-                    if (conclusion) conclusion.classList.add('visible');
-                }, costItems.length * 400 + 800);
-                
-                observer.unobserve(entry.target);
+                staggerObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.5 });
-    
-    observer.observe(screen2);
-}
+    }, { threshold: 0.2 });
 
-// ===== SCREEN 3: COST BAR DISSOLUTION =====
-function triggerCostBarAnimation() {
-    const costBar = document.getElementById('costBar');
-    if (!costBar) return;
-    
-    const segments = costBar.querySelectorAll('.cost-segment');
-    const endLabel = document.querySelector('.cost-label-end');
-    
-    // Dissolve segments one by one
-    segments.forEach((segment, index) => {
-        setTimeout(() => {
-            segment.classList.add('dissolve');
-        }, index * 800);
-    });
-    
-    // Show 50% label
-    setTimeout(() => {
-        if (endLabel) endLabel.classList.add('visible');
-    }, segments.length * 800 + 500);
+    groups.forEach(group => staggerObserver.observe(group));
 }
 
 // ===== SCREEN 4: NETWORK EXPANSION =====

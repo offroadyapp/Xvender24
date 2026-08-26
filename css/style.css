@@ -453,6 +453,21 @@ html {
     color: var(--text-primary);
 }
 
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    /* fall through */
+}
+
+/* ===== PROGRESSIVE ENHANCEMENT FALLBACK ===== */
+/* Content is visible by default (no-js / JS failure).
+   Animation initial states apply only when JS is active. */
+.no-js .fade-in-up,
+.no-js .fade-in-scale,
+.no-js .fade-in-seq {
+    opacity: 1 !important;
+    transform: none !important;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .nav-menu {
