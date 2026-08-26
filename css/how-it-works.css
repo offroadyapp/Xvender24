@@ -47,6 +47,7 @@
     letter-spacing: -1.5px;
     margin-bottom: var(--spacing-md);
     color: var(--text-primary);
+    max-width: none;
 }
 
 .content-column .subhead {
@@ -222,6 +223,7 @@
     font-weight: var(--weight-extra-bold);
     letter-spacing: -2px;
     margin-bottom: var(--spacing-lg);
+    max-width: none;
 }
 
 .cta-buttons {
