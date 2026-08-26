@@ -9,24 +9,10 @@
     color: #ffffff;
 }
 
-/* ===== NAVIGATION (DARK VERSION) ===== */
-.contact-nav {
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.contact-nav .logo a {
-    color: #ffffff;
-}
-
-.contact-nav .nav-menu a {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.contact-nav .nav-menu a:hover,
-.contact-nav .nav-menu a.active {
-    color: #ffffff;
+/* ===== ACTIVE NAV LINK (matches site convention) ===== */
+.nav-menu a.active {
+    color: var(--accent-blue);
+    border-bottom: 2px solid var(--accent-blue);
 }
 
 /* ===== MAIN CONTAINER ===== */
@@ -514,20 +500,20 @@
     transform: translateY(-2px);
 }
 
-/* ===== ANIMATIONS ===== */
+/* ===== ANIMATIONS (progressive enhancement) ===== */
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     25% { transform: translateX(-8px); }
     75% { transform: translateX(8px); }
 }
 
-.fade-in {
+.js .fade-in {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn 0.8s ease forwards;
 }
 
-.fade-in.delay-1 {
+.js .fade-in.delay-1 {
     animation-delay: 0.2s;
 }
 
@@ -538,17 +524,17 @@
     }
 }
 
-.fade-in-card {
+.js .fade-in-card {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInCard 0.6s ease forwards;
 }
 
-.fade-in-card.delay-0 { animation-delay: 0s; }
-.fade-in-card.delay-1 { animation-delay: 0.1s; }
-.fade-in-card.delay-2 { animation-delay: 0.2s; }
-.fade-in-card.delay-3 { animation-delay: 0.3s; }
-.fade-in-card.delay-4 { animation-delay: 0.4s; }
+.js .fade-in-card.delay-0 { animation-delay: 0s; }
+.js .fade-in-card.delay-1 { animation-delay: 0.1s; }
+.js .fade-in-card.delay-2 { animation-delay: 0.2s; }
+.js .fade-in-card.delay-3 { animation-delay: 0.3s; }
+.js .fade-in-card.delay-4 { animation-delay: 0.4s; }
 
 @keyframes fadeInCard {
     to {
@@ -557,18 +543,26 @@
     }
 }
 
-.fade-in-form {
+.js .fade-in-form {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInForm 0.6s ease forwards;
 }
 
-.fade-in-form.delay-0 { animation-delay: 0s; }
-.fade-in-form.delay-1 { animation-delay: 0.1s; }
-.fade-in-form.delay-2 { animation-delay: 0.2s; }
-.fade-in-form.delay-3 { animation-delay: 0.3s; }
-.fade-in-form.delay-4 { animation-delay: 0.4s; }
-.fade-in-form.delay-5 { animation-delay: 0.5s; }
+.js .fade-in-form.delay-0 { animation-delay: 0s; }
+.js .fade-in-form.delay-1 { animation-delay: 0.1s; }
+.js .fade-in-form.delay-2 { animation-delay: 0.2s; }
+.js .fade-in-form.delay-3 { animation-delay: 0.3s; }
+.js .fade-in-form.delay-4 { animation-delay: 0.4s; }
+.js .fade-in-form.delay-5 { animation-delay: 0.5s; }
+
+.no-js .fade-in,
+.no-js .fade-in-card,
+.no-js .fade-in-form {
+    opacity: 1;
+    transform: none;
+    animation: none;
+}
 
 @keyframes fadeInForm {
     to {
