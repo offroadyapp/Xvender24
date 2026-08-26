@@ -93,15 +93,22 @@
 }
 
 /* ===== ANIMATIONS ===== */
-.fade-reveal {
+/* Progressive enhancement: content visible by default (no-js / JS failure),
+   hidden only when JS is active and ready to reveal. */
+.js .fade-reveal {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.fade-reveal.visible {
+.js .fade-reveal.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.no-js .fade-reveal {
+    opacity: 1;
+    transform: none;
 }
 
 /* Delay system */
