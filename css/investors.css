@@ -1,5 +1,5 @@
 /* ===================================
-   INVESTORS PAGE - TESLA MINIMAL
+   INVESTORS PAGE - TECHNOLOGY POSITIONING
    Pure typography. No images. No icons.
    Power is in spacing and structure.
    =================================== */
@@ -21,25 +21,6 @@
     letter-spacing: 1.5px;
     opacity: 0.6;
     z-index: 999;
-    color: #ffffff;
-}
-
-/* ===== NAVIGATION (MINIMAL) ===== */
-.investors-nav {
-    background: rgba(0, 0, 0, 0.95);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.investors-nav .logo a {
-    color: #ffffff;
-}
-
-.investors-nav .nav-menu a {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.investors-nav .nav-menu a:hover,
-.investors-nav .nav-menu a.active {
     color: #ffffff;
 }
 
@@ -68,6 +49,11 @@
 .section-hero {
     padding-top: 200px;
     padding-bottom: 180px;
+}
+
+/* Model - Slightly darker */
+.section-model {
+    background: #0a0a0a;
 }
 
 /* Closing - Extra padding */
@@ -140,6 +126,48 @@
     margin: 0;
 }
 
+/* ===== LAYER LINE (SECTION 2) ===== */
+.layer-line {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 720px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.layer-line span {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #00d4ff;
+}
+
+/* ===== REVENUE LIST (SECTION 3) ===== */
+.revenue-list {
+    max-width: 720px;
+}
+
+.revenue-item {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.revenue-item:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.revenue-item::before {
+    content: '— ';
+    color: #00d4ff;
+    font-weight: 600;
+}
+
 /* ===== SPACING SYSTEM ===== */
 .spacer-24 { height: 24px; }
 .spacer-32 { height: 32px; }
@@ -173,19 +201,25 @@
     color: #000000;
 }
 
-/* ===== ANIMATIONS ===== */
+/* ===== ACTIVE NAV LINK (matches site convention) ===== */
+.nav-menu a.active {
+    color: var(--accent-blue);
+    border-bottom: 2px solid var(--accent-blue);
+}
 
-/* Fade In Sequential (Hero) */
-.fade-in-seq {
+/* ===== ANIMATIONS (progressive enhancement) ===== */
+
+/* Hero: auto-play staggered fade (JS class present) */
+.js .fade-in-seq {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeInSeq 0.8s ease forwards;
 }
 
-.fade-in-seq[data-delay="0"] { animation-delay: 0s; }
-.fade-in-seq[data-delay="1"] { animation-delay: 0.2s; }
-.fade-in-seq[data-delay="2"] { animation-delay: 0.4s; }
-.fade-in-seq[data-delay="3"] { animation-delay: 0.6s; }
+.js .fade-in-seq[data-delay="0"] { animation-delay: 0s; }
+.js .fade-in-seq[data-delay="1"] { animation-delay: 0.2s; }
+.js .fade-in-seq[data-delay="2"] { animation-delay: 0.4s; }
+.js .fade-in-seq[data-delay="3"] { animation-delay: 0.6s; }
 
 @keyframes fadeInSeq {
     to {
@@ -194,66 +228,77 @@
     }
 }
 
-/* Fade Up (Sections) */
-.fade-up {
+.no-js .fade-in-seq {
+    opacity: 1;
+    transform: none;
+}
+
+/* Scroll reveals */
+.js .fade-up {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.fade-up.visible {
+.js .fade-up.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Fade Up Slow (Closing) */
-.fade-up-slow {
+.js .fade-up-slow {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1.2s ease, transform 1.2s ease;
 }
 
-.fade-up-slow.visible {
+.js .fade-up-slow.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* ===== RESPONSIVE: TABLET (768px) ===== */
+.no-js .fade-up,
+.no-js .fade-up-slow {
+    opacity: 1;
+    transform: none;
+}
+
+/* ===== RESPONSIVE: TABLET (768px-1199px) ===== */
 @media (max-width: 1199px) {
     .container {
         padding: 0 32px;
     }
-    
+
     .section {
         padding: 120px 0;
     }
-    
+
     .section-hero {
         padding-top: 160px;
         padding-bottom: 140px;
     }
-    
+
     .section-closing {
         padding: 160px 0;
     }
-    
+
     .hero-title {
         font-size: 54px;
     }
-    
+
     .section-title {
         font-size: 32px;
     }
-    
+
     .body-large,
-    .body-stack p {
+    .body-stack p,
+    .revenue-item {
         font-size: 19px;
     }
-    
+
     .closing-large {
         font-size: 28px;
     }
-    
+
     .top-tag {
         right: 32px;
     }
@@ -264,94 +309,76 @@
     .container {
         padding: 0 24px;
     }
-    
+
     .section {
         padding: 90px 0;
     }
-    
+
     .section-hero {
         padding-top: 120px;
         padding-bottom: 100px;
     }
-    
+
     .section-closing {
         padding: 120px 0;
     }
-    
+
     .hero-title {
         font-size: 42px;
         letter-spacing: -0.005em;
     }
-    
+
     .section-title {
         font-size: 26px;
     }
-    
+
     .body-large,
-    .body-stack p {
+    .body-stack p,
+    .revenue-item {
         font-size: 18px;
     }
-    
+
     .closing-large {
         font-size: 24px;
     }
-    
+
     .top-tag {
         font-size: 10px;
         top: 24px;
         right: 24px;
     }
-    
+
     /* Stack buttons vertically */
     .cta-row {
         flex-direction: column;
         gap: 16px;
     }
-    
+
     .btn-outline {
         width: 100%;
         text-align: center;
         padding: 16px 24px;
     }
-    
+
     /* Reduce spacers on mobile */
     .spacer-32 { height: 24px; }
     .spacer-40 { height: 32px; }
     .spacer-60 { height: 40px; }
 }
 
-/* ===== FOOTER (MINIMAL) ===== */
-.investors-footer {
-    background: #000000;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 80px 48px;
-}
-
-.investors-footer p {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.investors-footer a {
-    color: rgba(255, 255, 255, 0.8);
-}
-
-.investors-footer a:hover {
-    color: #ffffff;
-}
-
 /* ===== PRINT STYLES (OPTIONAL) ===== */
 @media print {
     .top-tag,
-    .investors-nav,
-    .investors-footer {
+    .nav,
+    .footer {
         display: none;
     }
-    
+
     .section {
         padding: 60px 0;
         page-break-inside: avoid;
     }
-    
+
     .btn-outline {
         display: none;
     }
