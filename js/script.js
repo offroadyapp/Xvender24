@@ -380,6 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
     networkController = initNetworkCanvas();
     
     console.log('Xvender24 Website Loaded - Tesla Minimal Style');
+    document.body.classList.add('xv-ready');
 });
 
 // ===== SMOOTH SCROLL =====

@@ -112,5 +112,14 @@
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+    <!-- xv-anim-failsafe: reveal content even if main script fails (WeChat / old webviews) -->
+    <noscript><style>.fade-in-up,.fade-in-scale,.fade-in-seq{opacity:1 !important;transform:none !important}</style></noscript>
+    <script>
+      setTimeout(function () {
+        if (document.body && !document.body.classList.contains('xv-ready')) {
+          var els = document.querySelectorAll('.fade-in-up,.fade-in-scale,.fade-in-seq,.cost-item,.cost-tag,.cost-label-end');
+          for (var i = 0; i < els.length; i++) els[i].classList.add('visible');
+        }
+      }, 2500);
+    </script></body>
 </html>
